@@ -17,3 +17,27 @@
   width: 375px;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.green {
+  color: green;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.orange {
+  color: orange;
+}
+
+.cyan {
+  color: cyan
+}
+
+.purple {
+  color: darkmagenta;
+}
+
+.indent {
+  padding-left: 10px;
+}
