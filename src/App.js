@@ -13,17 +13,33 @@ const App = () => {
   const [reversedString, setReversedString] =useState('')
 
   const reverser = (string) => {
-    setReversedString(string.split('').reverse().join('')) 
+    /* setReversedString(string.split('').reverse().join(''))  */
+
+    /* let reversed = '';
+
+    for (let character of string) {
+      reversed = character + reversed;
+    }
+
+    setReversedString(reversed) */
+
+    setReversedString(string.split('').reduce((rev, char) => char + rev, ''));
   }
 
   return (
     <div className="app-container">
       <div className="app">
         <Header />
-        <Input string={string} setString={setString} reverser={reverser} />
-        <Output reversedString={reversedString} />
-        <Code />
-        <Explanation />
+        <div className="app-main">
+          <Input string={string} setString={setString} reverser={reverser} />
+          <Output reversedString={reversedString} />
+          <p className="sign">App by David Orson</p>
+        </div>
+        <div className="app-secondary">
+          <Code />
+          <Explanation />
+        </div>
+        
       </div>
       
     </div>

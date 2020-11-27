@@ -8,7 +8,7 @@
 }
 
 .explanation-opened {
-  height: 200px;
+  height: 300px;
 }
 
 .explanation-title {
@@ -22,7 +22,8 @@
   margin-left: -2px;
   margin-bottom: -2px;
   overflow-y: scroll;
-  height: 158px;
+  overflow-x: unset;
+  height: 260px;
 }
 
 .explanation-text {
