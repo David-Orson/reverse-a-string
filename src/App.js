@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import './App.css'
 
@@ -9,12 +9,19 @@ import Code from './components/Code';
 import Explanation from './components/Explanation';
 
 const App = () => {
+  const [string, setString] = useState('')
+  const [reversedString, setReversedString] =useState('')
+
+  const reverser = (string) => {
+    setReversedString(string.split('').reverse().join('')) 
+  }
+
   return (
     <div className="app-container">
       <div className="app">
         <Header />
-        <Input />
-        <Output />
+        <Input string={string} setString={setString} reverser={reverser} />
+        <Output reversedString={reversedString} />
         <Code />
         <Explanation />
       </div>

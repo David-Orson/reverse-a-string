@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import "../css/Input.css"
 
-const Input = () => {
-  const [string, setString] = useState('')
+const Input = (props) => {
+  const {string, setString, reverser} = props
   
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    reverser(string)
   } 
 
   return (
