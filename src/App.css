@@ -50,6 +50,23 @@
   box-shadow: 2px 2px 5px 1px rgb(190, 190, 190);
 }
 
+.dropdown-title-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -10px;
+}
+
+.arrow-down {
+  width: 30px;
+  padding: 0px 0px 0px 0px;
+  transform: rotate(90deg);
+  transition: all ease 0.4s;
+}
+
+.arrow-open {
+  transform: none;
+}
+
 .code-container {
   background: rgb(29, 0, 41);
   color: white;

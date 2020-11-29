@@ -13,7 +13,7 @@ const App = () => {
   const [reversedString, setReversedString] =useState('')
 
   const reverser = (string) => {
-    /* setReversedString(string.split('').reverse().join(''))  */
+    setReversedString(string.split('').reverse().join(''))
 
     /* let reversed = '';
 
@@ -23,7 +23,7 @@ const App = () => {
 
     setReversedString(reversed) */
 
-    setReversedString(string.split('').reduce((rev, char) => char + rev, ''));
+    /* setReversedString(string.split('').reduce((rev, char) => char + rev, '')); */
   }
 
   return (
@@ -39,9 +39,7 @@ const App = () => {
           <Code />
           <Explanation />
         </div>
-        
       </div>
-      
     </div>
   )
 }

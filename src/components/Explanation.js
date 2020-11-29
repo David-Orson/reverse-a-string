@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 import "../css/Explanation.css"
 
+import arrowDown from "../Assets/arrow-down.svg"
+
 const Explanation = () => {
   const [open, setOpen] = useState(false)
 
@@ -13,10 +15,12 @@ const Explanation = () => {
     }
   }
 
-
   return (
-    <div className={`explanation ${(open ? ('explanation-opened') : (null))}`} onClick={toggleOpen}>
-      <p className="explanation-title">More info, Solutions and Explanation</p>
+    <div className={`explanation ${(open ? ('explanation-opened') : (null))}`} >
+      <div className="dropdown-title-container">
+        <p className="explanation-title">More info, Solutions and Explanation</p>
+        <img src={arrowDown} className={`arrow-down ${open ? 'arrow-open' : null}`} onClick={toggleOpen} />
+      </div>
       <div className="explanation-dropdown">
         <p className="explanation-text">This is a simple coding challenge for reversing a string. <br /><br />
         There is quite an easy way to execute this using helper methods built into JS.<br /><br />

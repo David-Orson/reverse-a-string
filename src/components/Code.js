@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 import "../css/Code.css"
 
+import arrowDown from "../Assets/arrow-down.svg"
+
 const Code = () => {
   const [open, setOpen] = useState(false)
 
@@ -15,8 +17,12 @@ const Code = () => {
 
 
   return (
-    <div className={`code ${(open ? ('code-opened') : (null))}`} onClick={toggleOpen}>
-      <p className="code-title">Code used</p>
+    <div className={`code ${(open ? ('code-opened') : (null))}`} >
+      <div className="dropdown-title-container">
+        <p className="code-title">Code used</p>
+        <img src={arrowDown} className={`arrow-down ${open ? 'arrow-open' : null}`} onClick={toggleOpen} />
+      </div>
+      
       {/* {open ? ( */}<div className="code-dropdown">
         <p className="code-tagline">The code used for the functionality of this challenge is:</p>
         <div className="code-container">
