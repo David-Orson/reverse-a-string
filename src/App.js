@@ -10,7 +10,7 @@ import Explanation from './components/Explanation';
 
 const App = () => {
   const [string, setString] = useState('')
-  const [reversedString, setReversedString] =useState('')
+  const [reversedString, setReversedString] = useState('')
 
   const reverser = (string) => {
     setReversedString(string.split('').reverse().join(''))
